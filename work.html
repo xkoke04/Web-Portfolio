@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyResume - Work</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Work Experience</h1>
+    </header>
+
+    <section>
+        <h2>Project - Max Cats</h2>
+    <p><strong>Python</strong></p>
+        <li>A program for managing pet food sales.
+        <li>Purchased items can be viewed in the cart and displayed as a receipt within the program.</p>
+    </section>
+
+    <section>
+        <h2>Project - Wiyada House</h2>
+        <p><strong>Python</strong>
+        <li>Dormitory management system.
+        <li>Program management for owners to easily record electricity and water bills, including reporting, to address dormitory room issues.
+    </section>
+
+    <section>
+        <h2>Project - BU Wallet</h2>
+        <p><strong>Java , Net.maui , c++</strong></p>
+        <li>It is an online wallet simulator program for Bangkok University.
+        <li>You can transfer, deposit, and withdraw money. It’s a bank simulation within the university.
+    </section>
+
+    <section>
+        <h2>Project - Friend Link</h2>
+        <p><strong>HTML , CSS</strong></p>
+        <li>Web application for community in Bangkok University. 
+        <li>You can create a room, set the number of participants, and set up threads for asking and answering various questions.   
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var sections = document.querySelectorAll(".work-section");
+      
+          function revealSections() {
+            sections.forEach(function(section) {
+              var rect = section.getBoundingClientRect();
+              if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add("visible");
+              }
+            });
+          }
+      
+          window.addEventListener("scroll", revealSections);
+          revealSections();
+        });
+      </script>
+
+    <script>
+        function toggleMenu() {
+        const navMenu = document.getElementById('nav-menu');
+        navMenu.classList.toggle('active');
+        }
+    </script>
+    
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Napat Phakamas. All rights reserved.</p>
+        <p>Contact: napat.phak@bumail.net | Phone: 0959927483</p>
+    </div>
+</footer>
+
+</html>

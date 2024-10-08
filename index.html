@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyResume - Home</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <img src="profile.jpg" alt="Profile Image" style="width:150px; border-radius:50%;">
+        <h1>Welcome to My Resume</h1>
+        <p>Hi! This is Me, Napat Phakamas</p>
+    </header>    
+
+    <section class="home-section">
+        <h2>About Me</h2>
+        <p>A highly motivated and skilled Web Developer with a passion for creating dynamic and responsive websites. 
+            I am committed to delivering high-quality code and innovative solutions. Eager to contribute to a team and continue learning in the fast-paced tech industry.
+    <section>
+     <h2>Personal</h2>
+     <p><strong>Name : </strong> Napat Phakamas</p>
+     <p><strong>Nickname : </strong> KOKE</p>
+     <p><strong>Age :</strong> 22</p>
+     <p><strong>Languages : </strong> Thai, English (Intermediate)</p>
+     <p><strong>Interests :</strong> <li>Web Development</li> <li>App Development</li><li>Learning New Technologies</li>
+     <p>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var sections = document.querySelectorAll(".home-section");
+      
+          function revealSections() {
+            sections.forEach(function(section) {
+              var rect = section.getBoundingClientRect();
+              if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add("visible");
+              }
+            });
+          }
+      
+          window.addEventListener("scroll", revealSections);
+          revealSections();
+        });
+      </script>
+
+    <script>
+          function toggleMenu() {
+              const navMenu = document.getElementById('nav-menu');
+              navMenu.classList.toggle('active');
+          }
+      </script>
+      
+</body>
+
+    <footer class="footer-social">
+        <div class="social-links">
+            <a href="https://www.linkedin.com/in/napat-phakamas-9b63a9331/" target="_blank"><i class="fab fa-linkedin"></i></a>
+        </div>
+    </footer>
+    
+</html>

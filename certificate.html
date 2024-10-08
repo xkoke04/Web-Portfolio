@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyResume - Certificate</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" href="favicon.png" type="image/x-icon">
+</head>
+<body>
+    <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="education.html">Education</a></li>
+            <li><a href="work.html">Work</a></li>
+            <li><a href="certificate.html">Certificate</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>My Certificate</h1>
+    </header>
+
+    <section id="certificates" class="section">
+        <div class="certificate-container">
+            <div class="certificate">
+                <img src="certificate1.jpg" alt="Certificate 1">
+                <p>Python Language Basics and Fundamental Data Processing</p>
+            </div>
+            <div class="certificate">
+                <img src="certificate2.jpg" alt="Certificate 2">
+                <p>Practical Data Analytics Using RapidMiner</p>
+            </div>
+            <div class="certificate">
+                <img src="certificate3.jpg" alt="Certificate 3">
+                <p>Python Data Processing with NumPy and Matplotlib</p>
+            </div>
+        </div>
+    </section>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+          var sections = document.querySelectorAll(".certificates-section");
+      
+          function revealSections() {
+            sections.forEach(function(section) {
+              var rect = section.getBoundingClientRect();
+              if (rect.top < window.innerHeight && rect.bottom >= 0) {
+                section.classList.add("visible");
+              }
+            });
+          }
+      
+          window.addEventListener("scroll", revealSections);
+          revealSections();
+        });
+    </script>
+      
+    <script>
+        function toggleMenu() {
+            const navMenu = document.getElementById('nav-menu');
+            navMenu.classList.toggle('active');
+        }
+    </script>  
+    
+</body>
+
+<footer>
+    <div class="footer-content">
+        <p>&copy; 2024 Napat Phakamas. All rights reserved.</p>
+        <p>Contact: napat.phak@bumail.net | Phone: 0959927483</p>
+    </div>
+</footer>
+
+</html>

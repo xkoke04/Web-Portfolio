@@ -1,0 +1,363 @@
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f7f7f7;
+    color: #333;
+}
+
+nav ul {
+    list-style-type: none;
+    background-color: #4a90e2;
+    overflow: hidden;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+header {
+    background-color: #50b3a2;
+    color: white;
+    padding: 60px 20px;
+    text-align: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2em;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #4a90e2;
+}
+
+section p {
+    font-size: 1em;
+    line-height: 1.6;
+    color: #555;
+}
+
+a {
+    color: #4a90e2;
+    text-decoration: none;
+}
+
+header {
+    animation: fadeIn 2s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+section {
+    transition: transform 0.3s ease;
+}
+
+section:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.2);
+}
+a {
+    transition: color 0.2s ease-out;
+}
+
+
+nav ul li a {
+    color: white;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover, nav ul li a.active {
+    color: #FFD700;
+    transition: color 0.3s ease; 
+}
+
+footer {
+    background-color: #ffffff;
+    color: #559ECF;
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.social-links {
+    text-align: center;
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.social-links a {
+    margin: 0 15px;
+    color: #4a90e2;
+    font-size: 2.5em;
+    text-decoration: none;
+    transition: color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.social-links a:hover {
+    color: #FFD700;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.6),
+          
+    
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 8px #FFD700, 0 0 16px #FFD700, 0 0 24px #FFD700;
+    }
+ 
+}
+
+.social-links a:hover i {
+    animation: glow 1.5s infinite alternate;
+}
+
+section p {
+    font-weight: bold;
+    font-size: 0.95em;
+}
+
+.section-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 8px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation for Home section */
+.home-section {
+    opacity: 0;
+    transform: translateY(50px); /* Slide up */
+    transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.home-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Animation for Education section */
+.education-section {
+    opacity: 0;
+    transform: translateX(-100px); /* Slide from left */
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.education-section.visible {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Animation for Work section */
+.work-section {
+    opacity: 0;
+    transform: scale(0.8); /* Zoom in */
+    transition: opacity 1.5s ease-out, transform 1.5s ease-out;
+}
+
+.work-section.visible {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Animation for Contact section */
+.contact-section {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: opacity 1.2s ease-out, transform 1.2s ease-out;
+}
+
+.contact-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* สไตล์สำหรับ Content Footer */
+.footer-content {
+    background-color: #333;
+    color: #ccc;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.footer-content-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 20px;
+}
+
+.footer-contact {
+    text-align: left;
+}
+
+.footer-contact h4 {
+    color: #FFD700;
+    margin-bottom: 10px;
+}
+
+.footer-contact p {
+    margin: 5px 0;
+}
+
+.footer-contact a {
+    color: #FFD700;
+    text-decoration: none;
+}
+
+.footer-contact a:hover {
+    text-decoration: underline;
+}
+
+.footer-copyright {
+    text-align: right;
+}
+
+.footer-content p {
+    margin: 5px 0;
+    font-size: 0.9em;
+}
+
+@media (max-width: 768px) {
+    .footer-content-container {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-contact,
+    .footer-copyright {
+        text-align: center;
+        margin-bottom: 10px;
+    }
+}
+
+/* Certificates */
+#certificates {
+    background-color: #fff;
+    padding: 50px;
+    text-align: center;
+    color: #333;
+}
+
+.certificate-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.certificate {
+    max-width: 80%; 
+    margin-bottom: 40px; 
+    background-color: #fff; 
+    border: 2px solid #333; 
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0px 6px 20px rgba(0, 0, 0, 0.1); 
+    transition: transform 0.3s ease; 
+}
+
+.certificate:hover {
+    transform: scale(1.05); 
+}
+
+.certificate img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px; 
+    margin-bottom: 10px;
+}
+
+.certificate p {
+    font-size: 1.3rem;
+    color: #4a90e2; 
+    font-weight: bold;
+}
+
+/* ซ่อน hamburger menu บน desktop */
+.menu-toggle {
+    display: none;
+    cursor: pointer;
+    color: #4a90e2;
+    font-size: 2rem;
+    margin-left: 20px;
+}
+
+/* Hamburger Menu สำหรับ Mobile */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        background-color: #4a90e2;
+        position: absolute;
+        top: 50px;
+        left: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul.active {
+        display: flex;
+    }
+
+    .menu-toggle {
+        display: block;
+    }
+
+    nav ul li {
+        margin: 15px 0;
+    }
+
+    nav ul li a {
+        padding: 10px 0;
+        display: block;
+        width: 100%;
+    }
+}
